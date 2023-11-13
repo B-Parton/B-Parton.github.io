@@ -6,8 +6,8 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 200px;
-			height: 300px;
+			width: 70px;
+			height: 70px;
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
@@ -62,6 +62,9 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
+
+			var PositionX = positionX + 10
+			var moveBoxTo(positionX)
 			
 
 			
@@ -71,26 +74,26 @@
 			turn it around! 
 			*/
 			function update() { 
-				/* Your Code To Increase positionX by 10 HERE */
-
-				myVariable = myVariable + 10;
-				
-				moveBoxTo(1700);
+				if (positionX >= boardWidth) { speed = speed * -1 }
+				moveBoxTo(positionX);
+				if(positionX >= boardWidth) { speed = speed * -1 }
+				if(positionX <= 0) { speed = speed * -1 }
 				
 
 			};
+	
 
-			/* 
-			This Function will be called each time the box is clicked. Each time it is called,
-			it should increase the points total, increase the speed, and move the box to
-			the left side of the screen.
-			*/
 			function handleBoxClick() {
-				var positionX = 1;
+				positionX = 0;
 			    changeBoxText(1);
-				speed = speed + 3
-				points = points + 1
-				speed = speed + -1
+	            points = points + 1;
+				changeBoxText(points);
+				speed = speed + 1
+				moveBoxTo(positionX) ;
+
+				if (conditionIsTrue) {250, 200, 100
+
+				}
 				
 
 
